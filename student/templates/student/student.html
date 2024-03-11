@@ -1,0 +1,138 @@
+{% extends 'temp/home_base.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style>
+		input[type=text],
+		input[type=password],
+		input[type=number],
+		input[type=email],
+		input[type=date],
+		input[type=time],
+		select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #f5e5e5;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+	
+		input[type=submit] {
+			width: 100%;
+			background-color: #8c113a;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+	
+		input[type=submit]:hover {
+			background-color: #ed0d50;
+		}
+	
+		.a {
+			border-radius: 5px;
+	
+			padding: 20px;
+		}
+	
+		td {
+			color: rgb(12, 0, 0);
+			font-size: large;
+		}
+	
+		h2 {
+			color: rgb(12, 12, 12);
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			text-align: center;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<center>
+		<div class="a">
+		<h2>Student Register</h2>
+		<form method="post">
+			{% csrf_token %}
+			<table>
+				<tr>
+					<td> Admission No</td>
+					<td><input type="text" name="adm" required></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="name" required></td>
+				</tr>
+				<tr>
+					<td>Blood Group</td>
+					<td>
+						<select name="bloodGroup" required>
+							<option>------------------Select--------------------</option>
+							<option value="A+">A+</option>
+							<option value="A-">A-</option>
+							<option value="B+">B+</option>
+							<option value="B-">B-</option>
+							<option value="AB+">AB+</option>
+							<option value="AB-">AB-</option>
+							<option value="O+">O+</option>
+							<option value="O-">O-</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Course</td>
+					<td><input type="text" name="course" required></td>
+				</tr>
+				<tr>
+					<td>Year</td>
+					<td>
+						<select name="year" required>
+							<option>------------------Select--------------------</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Phone</td>
+					<td><input type="text" name="phone" required maxlength="10" minlength="10" pattern="[0-9]{10}"></td>
+				</tr>
+				<tr>
+					<td>DoB</td>
+					<td><input type="date" name="dob" required></td>
+				</tr>
+				<tr>
+					<td>Username</td>
+					<td><input type="text" name="username" required></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="password" required maxlength="15" minlength="8"></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Register"></td>
+
+				</tr>
+			</table>
+		</form>
+		</div>
+	</center>
+
+</body>
+
+</html>
+{% endblock %}

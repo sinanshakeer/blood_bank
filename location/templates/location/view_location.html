@@ -1,0 +1,27 @@
+{% extends 'temp/hospital_base.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		<h2>View Location</h2>
+		<table border="2">
+			<tr>
+			<td>Student Name</td>
+            <td>Location</td>
+		</tr>
+            {% for i in x %}
+		<tr>
+			<td>{{ i.student.name }}</td>
+            <td><a href="/location/map/{{ i.location_id }}" class="btn btn-primary" >map</a></td>
+		</tr>
+            {% endfor %}
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

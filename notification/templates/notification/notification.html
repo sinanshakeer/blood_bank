@@ -1,0 +1,82 @@
+{% extends 'temp/college_base.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		input[type=text],
+		input[type=password],
+		input[type=number],
+		input[type=email],
+		input[type=date],
+		input[type=time],
+		select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #f5e5e5;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+	
+		input[type=submit] {
+			width: 100%;
+			background-color: #8c113a;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+	
+		input[type=submit]:hover {
+			background-color: #ed0d50;
+		}
+	
+		.a {
+			border-radius: 5px;
+	
+			padding: 20px;
+		}
+	
+		td {
+			color: rgb(12, 0, 0);
+			font-size: large;
+		}
+	
+		h2 {
+			color: rgb(12, 12, 12);
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			text-align: center;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<div class="a">
+		<h2>Add Notification</h2>
+		<form method="post">
+			{% csrf_token %}
+			<table>
+				
+				<tr>
+					<td>Notification</td>
+					<td><textarea name="notification" rows="5" cols="17" required></textarea></td>
+				</tr>
+			
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Add"></td>
+				</tr>
+			</table>
+		</form>
+		</div>
+	</center>
+
+</body>
+</html>
+{% endblock %}

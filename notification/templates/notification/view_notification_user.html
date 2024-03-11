@@ -1,0 +1,72 @@
+{% extends 'temp/user_base.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		td {
+			color: rgb(10, 1, 1);
+			font-size: larger;
+			border: 1px solid #121212;
+			text-align: left;
+			padding: 8px;
+		}
+
+		th {
+			color: rgb(16, 16, 16);
+			font-size: larger;
+			border: 1px solid #0b0b0b;
+			text-align: left;
+			padding: 8px;
+		}
+
+		h2 {
+			color: rgb(11, 11, 11);
+			text-align: center;
+		}
+
+		.b {
+			width: 100%;
+			background-color: #d50e3d;
+			color: white;
+			padding: 5px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		.b:hover {
+			background-color: #b20c0c;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h2>View Notification By User</h2>
+		<div class="container mt-3">
+			<div class="table-responsive">
+				<table border="2" class="table table-bordered">
+
+			<tr>
+			<td>Notification</td>
+            <td>Date</td>
+            <td>Time</td>
+		</tr>
+		{% for i in x %}
+		<tr>
+			<td>{{i.notification}}</td>
+			<td>{{i.date}}</td>
+			<td>{{i.time}}</td>
+		
+		</tr>
+		{% endfor %}
+		</table>
+		</div>
+		</div>
+	</center>
+
+</body>
+</html>
+{% endblock %}
