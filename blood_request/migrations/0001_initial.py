@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'db_table': 'blood_request',
-                'managed': False,
+                'managed': True,
             },
         ),
     ]

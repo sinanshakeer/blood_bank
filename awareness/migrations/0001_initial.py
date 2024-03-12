@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'db_table': 'awareness',
-                'managed': False,
+                'managed': True,
             },
         ),
     ]

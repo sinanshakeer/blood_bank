@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'db_table': 'camp_request',
-                'managed': False,
+                'managed': True,
             },
         ),
     ]

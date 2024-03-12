@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'db_table': 'location',
-                'managed': False,
+                'managed': True,
             },
         ),
     ]

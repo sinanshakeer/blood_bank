@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'db_table': 'hospital',
-                'managed': False,
+                'managed': True,
             },
         ),
     ]
